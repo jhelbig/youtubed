@@ -1,0 +1,5 @@
+table tr:hover { background-color: #8CB7F0; }
+table tr.info td { background-color: #0078FF; }
+table tr.info:hover td { background-color: #009EE0; }
+img.loading-notice{ width: 6em }
+table tr:not(:first-of-type) { cursor: pointer; }

@@ -1,0 +1,38 @@
+{
+  "download_directory": "$DOWNLOAD_DIRECTORY",
+  "api_port": "$API_PORT",
+  "app_port": "$APP_PORT",
+  "notifications": {
+    "active": $NOTIFICATION_STATE,
+    "type": "$NOTIFICATION_TYPE",
+    "slack": {
+      "create": {
+        "url": "$SLACK_WEBHOOK_URL",
+        "config":{
+          "channel": "$SLACK_NOTIFICATION_CHANNEL",
+          "username": "$SLACK_NOTIFICATION_BOT_NAME",
+          "icon_url": "$SLACK_NOTIFICATION_BOT_ICON"
+        },
+        "message": "$START_MESSAGE"
+      },
+      "failed": {
+        "url": "$SLACK_WEBHOOK_URL",
+        "config":{
+          "channel": "$SLACK_NOTIFICATION_CHANNEL",
+          "username": "$SLACK_NOTIFICATION_BOT_NAME",
+          "icon_url": "$SLACK_NOTIFICATION_BOT_ICON"
+        },
+        "message": "$FAILED_MESSAGE"
+      },
+      "complete": {
+        "url": "$SLACK_WEBHOOK_URL",
+        "config":{
+          "channel": "$SLACK_NOTIFICATION_CHANNELs",
+          "username": "$SLACK_NOTIFICATION_BOT_NAME",
+          "icon_url": "$SLACK_NOTIFICATION_BOT_ICON"
+        },
+        "message": "$COMPLETE_MESSAGE"
+      }
+    }
+  }
+}

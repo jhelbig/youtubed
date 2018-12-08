@@ -1,0 +1,15 @@
+<img *ngIf="loading" src="/assets/loading.gif" class="img-circle loading-notice" title="Loading quality results" />
+<table *ngIf="formats != undefined" class="table table-bordered table-hover table-condensed">
+  <tr>
+    <th>Format Name</th>
+    <th>File Extention</th>
+    <th>Quality level</th>
+    <th>Filesize in bytes</th>
+  </tr>
+  <tr *ngFor="let format of formats; let i = index" [ngClass]="{ 'info': format.format_id == bestFormat }" [title]="format.format_id == bestFormat ? 'this was the best format found' : ''" (click)="download(format)">
+    <td>{{format.format}}</td>
+    <td>{{format.ext}}</td>
+    <td>{{format.quality}}</td>
+    <td>{{format.filesize}}</td>
+  </tr>
+</table>

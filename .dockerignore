@@ -1,0 +1,7 @@
+dist
+node_modules
+README.md
+src/*.spec.ts
+Dockerfile
+.dockerignore
+.git*
