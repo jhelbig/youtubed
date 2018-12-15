@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  youtubed_api: "http://localhost:8443/api"
+  youtubed_api: "http://localhost:8443"
 };
 
 /*
