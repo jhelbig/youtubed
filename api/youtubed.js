@@ -29,7 +29,7 @@ var notify = function(notification_type, info){
   //slack integration setup and call
   if ( config.notifications.type == "slack" ) {
     let Slack = require('node-slackr');
-    let slack_config = config.notifications.slack.slack_notification[notification_type];
+    let slack_config = config.notifications.slack[notification_type];
     let slack = new Slack(slack_config.url, slack_config.config);
     let msg = slack_config.message;
     Object.keys(info).forEach(key => {
@@ -88,7 +88,7 @@ api.get("/api/download", function(req, res) {
       console.info(error);
       notify("failed", vidInfo);
     });
-    video.pipe(fs.createWriteStream(config.download_directory + req.query.filename));
+    video.pipe(fs.createWriteStream(config.download_directory + "/" + req.query.filename));
     res.send(true);
   }catch(error) {
     console.error(error);
