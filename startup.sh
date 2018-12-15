@@ -10,4 +10,4 @@ fi
 cat /app/api/youtubed_config.json
 
 echo "Starting Application Service"
-node /app/api/youtubed.js
+cd /app/api && node youtubed.js
