@@ -7,6 +7,7 @@ ENV NOTIFICATION_STATE="false"
 ENV START_MESSAGE="*@title* has begun download"
 ENV FAILED_MESSAGE="*@title* has failed to download"
 ENV COMPLETE_MESSAGE="*@title* has completed download"
+ENV DOMAIN="localhost"
 ENV API_PORT="8443"
 ENV APP_PORT="8080"
 
