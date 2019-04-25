@@ -14,7 +14,7 @@ ENV APP_PORT="8080"
 RUN \
     echo "**** install required packages ****" && \
     apt-get update && \
-    apt-get install -y gettext ffmpeg && \
+    apt-get install -y --no-install-recommends gettext && \
     apt-get autoclean
 
 RUN mkdir /downloads
@@ -28,6 +28,8 @@ WORKDIR /app
 RUN npm install && \
     npm run-script build && \
     rm -fR e2e src && \
-    rm -f *.json README.md
+    rm -f *.json README.md && \
+    rm -fR node_modules && \
+    npm i express cors node-slackr youtube-dl
 
 ENTRYPOINT ["/app/startup.sh"]
